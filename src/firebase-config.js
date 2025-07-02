@@ -1,0 +1,1 @@
+// Firebase config connected to project
