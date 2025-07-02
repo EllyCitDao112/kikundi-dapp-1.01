@@ -1,1 +1,49 @@
-<!-- Kikundi 1.01 RC - GitHub Pages version -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kikundi 1.01 RC</title>
+  <link rel="stylesheet" href="./assets/style.css" />
+</head>
+<body class="dark-theme">
+  <header>
+    <img src="./assets/logo-dark.png" alt="Kikundi Logo" style="height: 80px;">
+    <h1>Kikundi 1.01: Harvest Crop</h1>
+    <p class="nft-quote">“For the People. For the Purpose. For the Power.”</p>
+  </header>
+
+  <main>
+    <section id="wallet-section">
+      <button onclick="connectWallet()">🔗 Connect Wallet</button>
+      <p id="wallet-address">Wallet not connected</p>
+    </section>
+
+    <section id="staking-section" style="display:none;">
+      <h2>🌾 Stake Your KKT</h2>
+      <p>Balance: <span id="kkt-balance">0</span> KKT</p>
+      <input type="number" id="stake-amount" placeholder="Amount to stake" />
+      <button onclick="stakeTokens()">Stake</button>
+      <button onclick="unstakeTokens()">Unstake</button>
+      <p>Staked: <span id="staked-amount">0</span> | Rewards: <span id="rewards-earned">0</span></p>
+    </section>
+
+    <section id="chat-section">
+      <h2>💬 Kikundi Group Chat</h2>
+      <div id="chat-box"></div>
+      <input type="text" id="chat-input" placeholder="Say something..." />
+      <button onclick="sendMessage()">Send</button>
+    </section>
+  </main>
+
+  <footer>
+    <small>📱 Powered by ELLYCIT DAO | 1-888-GPT-0090</small>
+  </footer>
+
+  <script src="./config.js"></script>
+  <script src="./firebase-config.js"></script>
+  <script src="./src/walletConnect.js"></script>
+  <script src="./src/staking.js"></script>
+  <script src="./src/web.js"></script>
+</body>
+</html>
