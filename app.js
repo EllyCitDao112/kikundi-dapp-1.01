@@ -1,0 +1,1 @@
+// WalletConnect + Firebase logic
