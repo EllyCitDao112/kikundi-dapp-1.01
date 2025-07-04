@@ -1,18 +1,21 @@
-# Kikundi Staking dApp 1.01
+# Kikundi DApp Core
 
-## Run locally:
-```bash
-npm install
-npm run dev
+This repository contains the core smart contracts, frontend UI, and backend integrations for the Kikundi decentralized application (Kikundi 1.01 “Harvest Crop”).
 
+## Project Structure
 
----
+- `contracts/` - Solidity smart contracts for KKT token and staking
+- `frontend/` - JavaScript + HTML app to interact with smart contracts
+- `backend/` - Firebase + XMTP logic for chat, referrals, and notifications
 
-### 📁 **src/index.js**
-```js
-import './styles.css';
-import App from './App';
+## Features
 
-window.onload = () => {
-  App();
-};
+- 🪙 ERC-20 Kikundi Token (KKT)
+- 🌾 Token staking with reward system
+- 👛 Wallet integration (MetaMask, WalletConnect)
+- 🔥 Firebase chat and referral tracking
+- 🌐 Cross-platform DApp, mobile-first design
+
+## License
+
+MIT
