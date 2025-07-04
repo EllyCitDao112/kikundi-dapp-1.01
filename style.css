@@ -1,1 +1,21 @@
-// style.css
+body {
+  background-color: #0a0a0a;
+  color: #f1f1f1;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  padding-top: 60px;
+}
+button {
+  padding: 12px 20px;
+  margin: 12px;
+  font-size: 16px;
+  background-color: #f4c542;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #ffd966;
+}
