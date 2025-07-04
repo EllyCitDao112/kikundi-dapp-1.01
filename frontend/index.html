@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kikundi DApp</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <h1>Kikundi Token Staking</h1>
+    <button onclick="connectWallet()">Connect Wallet</button>
+    <div>
+      <p>Your Balance: <span id="balance">0</span> KKT</p>
+      <input type="number" id="stakeAmount" placeholder="Amount to stake">
+      <button onclick="stake()">Stake</button>
+      <button onclick="unstake()">Unstake</button>
+    </div>
+  </div>
+  <script src="app.js" type="module"></script>
+</body>
+        </html>
+        
