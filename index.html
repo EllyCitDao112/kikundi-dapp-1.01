@@ -2,25 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kikundi 1.01 - Harvest Crop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kikundi DApp 1.01 - Harvest Crop</title>
   <link rel="stylesheet" href="style.css" />
-  <script defer src="app.js"></script>
+  <link rel="manifest" href="manifest.json" />
 </head>
 <body>
+  <header>
+    <img src="assets/logo.png" alt="Kikundi DAO Logo" class="logo" />
+    <h1>🌾 Kikundi Harvest Crop DApp 🌾</h1>
+  </header>
+
   <main>
-    <h1>KKT Token Dashboard</h1>
-    <div id="walletInfo"></div>
-    <section class="dashboard">
-      <div id="kktBalance"></div>
+    <section id="wallet-section">
+      <button onclick="connectWallet()">🔌 Connect Wallet</button>
+      <button onclick="claimFaucet()">🧪 Claim Test Airdrop</button>
+      <p id="wallet-address"></p>
+    </section>
+
+    <section id="dashboard">
+      <h2>Your KKT Stats</h2>
+      <div id="balance"></div>
       <div id="apy"></div>
-      <div id="tzsValue"></div>
+      <div id="reward"></div>
     </section>
-    <section class="actions">
-      <button onclick="stakeTokens()">Stake</button>
-      <button onclick="unstakeTokens()">Unstake</button>
-      <button onclick="claimRewards()">Claim Rewards</button>
+
+    <label><input type="checkbox" id="autocompound" /> 🔁 Enable Auto-Compounding</label>
+
+    <section id="actions">
+      <button onclick="stakeTokens()">🌱 Stake</button>
+      <button onclick="unstakeTokens()">⛏️ Unstake</button>
+      <button onclick="claimRewards()">💰 Claim</button>
     </section>
+
+    <section id="referral">
+      <h3>📲 Invite Friends – Get Bonus KKT</h3>
+      <input type="text" readonly value="https://kikundi-dapp-core.web.app/?ref=0xYourWallet" />
+      <p>👥 Invited: <span id="refCount">0</span> / 5</p>
+      <button onclick="claimReferralBonus()">🎁 Claim Bonus</button>
+    </section>
+
+    <footer>
+      <p>“For the People. For the Purpose. For the Power.” – Founding Token #0001</p>
+    </footer>
   </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/ethers/dist/ethers.min.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="walletconnect.js"></script>
+  <script src="staking.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
