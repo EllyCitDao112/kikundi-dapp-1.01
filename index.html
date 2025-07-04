@@ -1,55 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Kikundi 1.01 – Harvest Crop</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kikundi 1.01 - Harvest Crop</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="app.js"></script>
 </head>
 <body>
-  <h1>Kikundi 1.01 – Harvest Crop</h1>
-  <button onclick="connectWallet()">🔌 Connect Wallet</button>
-  <div id="wallet-status">Wallet not connected</div>
-  <button onclick="showReferral()">🎁 Show Referral</button>
-
-  <section id="dashboard">
-    <div class="card">
-      <h2>📊 KKT Token Metrics – Live</h2>
-      <p>Price (USD): <span id="price">...</span></p>
-      <p>24h Change: <span id="change">...</span></p>
-      <p>Volume (24h): <span id="volume">...</span></p>
-    </div>
-    <div class="card">
-      <h2>🎥 The DAO Scrolls – Launch Video</h2>
-      <iframe src="https://www.youtube.com/embed/Zu1Vuzukbrk" allowfullscreen></iframe>
-    </div>
-  </section>
-
-  <section id="group-chat" class="card">
-    <h2>💬 Kikundi DAO Chat (kikundi-alpha)</h2>
-    <div id="chat-box" style="height: 200px; overflow-y: auto; background: #111; padding: 10px; border-radius: 8px;"></div>
-    <input type="text" id="chat-input" placeholder="Type a message..." style="width: 80%;" />
-    <button onclick="sendMessage()">Send</button>
-  </section>
-
-  <script src="wallet.js"></script>
-  <script src="referral_airdrop.js"></script>
-  <script type="module" src="walletconnect-firebase.js"></script>
-  <script>
-    async function fetchKKT() {
-      try {
-        const res = await fetch("https://api.dexscreener.com/latest/dex/pairs/bsc/0xB3F3c962d779C1F838a27ac610a959C4Ad35c845");
-        const d = await res.json();
-        const pair = d.pair;
-        document.getElementById("price").innerText = "$" + parseFloat(pair.priceUsd).toFixed(6);
-        document.getElementById("change").innerText = (pair.priceChange.h24 * 100).toFixed(2) + "%";
-        document.getElementById("volume").innerText = "$" + (pair.volume.h24Usd / 1e3).toFixed(1) + "K";
-      } catch (err) {
-        console.error("KKT fetch error", err);
-      }
-    }
-    fetchKKT();
-    setInterval(fetchKKT, 30000);
-  </script>
+  <main>
+    <h1>KKT Token Dashboard</h1>
+    <div id="walletInfo"></div>
+    <section class="dashboard">
+      <div id="kktBalance"></div>
+      <div id="apy"></div>
+      <div id="tzsValue"></div>
+    </section>
+    <section class="actions">
+      <button onclick="stakeTokens()">Stake</button>
+      <button onclick="unstakeTokens()">Unstake</button>
+      <button onclick="claimRewards()">Claim Rewards</button>
+    </section>
+  </main>
 </body>
 </html>
