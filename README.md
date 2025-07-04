@@ -1,12 +1,18 @@
-# Kikundi 1.01 – "Harvest Crop" 🌾
+# Kikundi Staking dApp 1.01
 
-## Features:
-- 🔐 Wallet connection via MetaMask
-- 🎁 Referral Airdrop: Invite & Earn KKT
-- 🔥 Firebase wallet logging
-- 📱 Mobile-ready dark UI
+## Run locally:
+```bash
+npm install
+npm run dev
 
-## Run Locally:
-1. Open `index.html` in a browser with Web3 support.
-2. Click “Connect Wallet”.
-3. Share referral link after connecting.
+
+---
+
+### 📁 **src/index.js**
+```js
+import './styles.css';
+import App from './App';
+
+window.onload = () => {
+  App();
+};
