@@ -1,0 +1,1 @@
+// ClaimRewards.js: Claim KKT reward button (calls claimKKT)

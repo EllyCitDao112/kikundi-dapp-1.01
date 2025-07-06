@@ -1,0 +1,1 @@
+// VoteRatification.js: YES/NO vote for renewable energy policy

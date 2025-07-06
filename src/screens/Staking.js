@@ -1,1 +1,1 @@
-
+// Staking.js: UI + stake/unstake logic (connects to utils/staking.js)
