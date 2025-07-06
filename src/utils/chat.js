@@ -1,0 +1,1 @@
+// chat.js: getMessages and sendMessage – mock Firebase logic

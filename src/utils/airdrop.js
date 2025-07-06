@@ -1,0 +1,1 @@
+// airdrop.js: claimFaucet and checkEligibility (live contract-ready)

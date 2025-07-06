@@ -1,0 +1,1 @@
+// referral.js: trackReferral, getReferralCount - using localStorage

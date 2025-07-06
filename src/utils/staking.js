@@ -1,0 +1,1 @@
+// staking.js: stakeKKT, unstakeKKT, getRewardEarned functions – to use live ABI
