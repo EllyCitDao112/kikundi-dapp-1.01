@@ -1,0 +1,1 @@
+// WalletProvider.jsx: Web3Modal and Wagmi integration

@@ -1,0 +1,1 @@
+// App.jsx: Loads WalletConnect, renders <Home />

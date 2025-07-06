@@ -1,0 +1,1 @@
+// Home.js: Live KKT metrics, YouTube embed, price from CoinGecko
