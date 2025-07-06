@@ -1,0 +1,1 @@
+// Injected mock staking ABI logic

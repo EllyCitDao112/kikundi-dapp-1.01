@@ -1,0 +1,1 @@
+// Injected mock DAO voting ABI logic
